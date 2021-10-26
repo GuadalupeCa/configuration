@@ -6,3 +6,12 @@ spring:
   data:
     mongodb:
       uri: mongodb://localhost:27017/depositDB
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
