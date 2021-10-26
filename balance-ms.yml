@@ -1,8 +1,8 @@
 server:
-  port: 8082
+  port: 8087
 spring:
   application:
-    name: debitms
+    name: balance-ms
   data:
     mongodb:
-      uri: mongodb://localhost:27017/debitDB
+      uri: mongodb://localhost:27017/
