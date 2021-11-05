@@ -1,5 +1,5 @@
 server:
-  port: 8082
+  port: 8085
 spring:
   application:
     name: retirement-ms
@@ -15,3 +15,8 @@ management:
   endpoint:
     health:
       show-details: always
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
