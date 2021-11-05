@@ -1,8 +1,7 @@
 server:
   port: 8088
+  sss
 spring:
-  application:
-    name: transaction-ms
   data:
     mongodb:
       uri: mongodb://localhost:27017/

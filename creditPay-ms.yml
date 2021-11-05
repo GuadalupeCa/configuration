@@ -1,8 +1,7 @@
 server:
   port: 8085
+
 spring:
-  application:
-    name: creditPay-ms
   data:
     mongodb:
       uri: mongodb://localhost:27017/creditPayDB
