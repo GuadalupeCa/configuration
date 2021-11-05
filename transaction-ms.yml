@@ -1,6 +1,3 @@
-server:
-  port: 8088
-  sss
 spring:
   data:
     mongodb:
