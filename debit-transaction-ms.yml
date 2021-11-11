@@ -1,0 +1,21 @@
+server:
+  port: 8085
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/debitTransactionDB
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
