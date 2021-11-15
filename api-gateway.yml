@@ -24,13 +24,13 @@ spring:
           predicates:
             - Path=/credit/**
         - id: debit-transaction-ms
-            uri: http://localhost:8085/
-            predicates:
-              - Path=/debitTrans/**
+          uri: http://localhost:8085/
+          predicates:
+            - Path=/debitTrans/**
         - id: credit-transaction-ms
-            uri: http://localhost:8086/
-            predicates:
-              - Path=/creditTrans/**
+          uri: http://localhost:8086/
+          predicates:
+            - Path=/creditTrans/**
 
 eureka:
   client:
