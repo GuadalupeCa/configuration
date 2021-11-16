@@ -26,7 +26,13 @@ eureka:
 
 resilience4j:
   circuitbreaker:
-    instances:
+    configs:
+      default:
+        slidingWindowSize: 10
+        permittedNumberOfCallsInHalfOpenState: 3
+        waitDurationInOpenState: 2s
+        failureRateThreshold: 50
+  instances:
       debitService:
         registerHealthIndicator: true
         eventConsumerBufferSize: 10
