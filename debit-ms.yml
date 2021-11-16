@@ -7,6 +7,9 @@ spring:
       uri: mongodb://localhost:27017/debitDB
 
 management:
+  health:
+    circuitbreakers:
+      enabled: true
   endpoints:
     web:
       exposure:
@@ -29,6 +32,18 @@ resilience4j:
         permittedNumberOfCallsInHalfOpenState: 3
         waitDurationInOpenState: 2s
         failureRateThreshold: 50
+  instances:
+      debitService:
+        registerHealthIndicator: true
+        eventConsumerBufferSize: 10
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        failureRateThreshold: 50
+        minimumNumberOfCalls: 2
+        permittedNumberOfCallsInHalfOpenState: 3
+        slidingWindowSize: 10
+        waitDurationInOpenState: 2s
+        slidingWindowType: COUNT_BASED
+
 
 
 
