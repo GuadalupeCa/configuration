@@ -7,9 +7,6 @@ spring:
       uri: mongodb://localhost:27017/debitDB
 
 management:
-  health:
-    circuitbreakers:
-      enabled: true
   endpoints:
     web:
       exposure:
