@@ -7,7 +7,7 @@ spring:
   cloud:
     gateway:
       discovery:
-        client:
+        locator:
           enabled: true
 #      routes:
 #        - id: client-ms
