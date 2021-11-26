@@ -9,30 +9,30 @@ spring:
           enabled: true
           lowerCaseServiceId: true
       routes:
-        - id: client-ms
-          uri: lb://CLIENT-MS
-          predicates:
-          - Path=/client/**
-        - id: product-ms
-          uri: lb://PRODUCT-MS
-          predicates:
-          - Path=/product/**
-        - id: debit-ms
-          uri: lb://DEBIT-MS
-          predicates:
-          - Path=/debit/**
-        - id: credit-ms
-          uri: lb://CREDIT-MS
-          predicates:
-          - Path=/credit/**
-        - id: debit-transaction-ms
-          uri: lb://DEBIT-TRANSACTION-MS
-          predicates:
-             Path=/debitTrans/**
-        - id: credit-transaction-ms
-          uri: lb://CREDIT-TRANSACTION-MS
-          predicates:
-          - Path=/creditTrans/**
+      - id: client-ms
+        uri: lb://CLIENT-MS
+        predicates:
+        - Path=/client/**
+      - id: product-ms
+        uri: lb://PRODUCT-MS
+        predicates:
+        - Path=/product/**
+      - id: debit-ms
+        uri: lb://DEBIT-MS
+        predicates:
+        - Path=/debit/**
+      - id: credit-ms
+        uri: lb://CREDIT-MS
+        predicates:
+        - Path=/credit/**
+      - id: debit-transaction-ms
+        uri: lb://DEBIT-TRANSACTION-MS
+        predicates:
+           Path=/debitTrans/**
+      - id: credit-transaction-ms
+        uri: lb://CREDIT-TRANSACTION-MS
+        predicates:
+        - Path=/creditTrans/**
 
 
 
