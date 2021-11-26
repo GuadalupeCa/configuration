@@ -1,8 +1,6 @@
 server:
   port: 8080
 
-
-
 spring:
   cloud:
     gateway:
@@ -35,7 +33,6 @@ spring:
         uri: lb://CREDIT-TRANSACTION-MS
         predicates:
         - Path=/creditTrans/**
-
 
 eureka:
   client:
