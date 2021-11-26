@@ -1,42 +1,45 @@
-#server:
-#  port: 8080
-#
-#spring:
-#  application:
-#    name: api-gateway
-##  cloud:
-##    gateway:
-##      discovery:
-###        enabled: true
-##        locator:
-##          enabled: true
-###      routes:
-###        - id: client-ms
-###          uri: http://localhost:8081/
-###          predicates:
-###            - Path=/client/**
-###        - id: product-ms
-###          uri: http://localhost:8082/
-###          predicates:
-###            - Path=/product/**
-###        - id: debit-ms
-###          uri: http://localhost:8083/
-###          predicates:
-###            - Path=/debit/**
-###        - id: credit-ms
-###          uri: http://localhost:8084/
-###          predicates:
-###            - Path=/credit/**
-###        - id: debit-transaction-ms
-###          uri: http://localhost:8085/
-###          predicates:
-###            - Path=/debitTrans/**
-###        - id: credit-transaction-ms
-###          uri: http://localhost:8086/
-###          predicates:
-###            - Path=/creditTrans/**
-#
-#eureka:
-#  client:
-#    serviceUrl:
-#      defaultZone: http://localhost:8761/eureka
+server:
+  port: 8080
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
+      routes:
+        - id: client-ms
+          uri: lb://CLIENT-MS
+          predicates:
+          - Path=/client/**
+        - id: product-ms
+          uri: lb://PRODUCT-MS
+          predicates:
+          - Path=/product/**
+        - id: debit-ms
+          uri: lb://DEBIT-MS
+          predicates:
+          - Path=/debit/**
+        - id: credit-ms
+          uri: lb://CREDIT-MS
+          predicates:
+          - Path=/credit/**
+        - id: debit-transaction-ms
+          uri: lb://DEBIT-TRANSACTION-MS
+          predicates:
+             Path=/debitTrans/**
+        - id: credit-transaction-ms
+          uri: lb://CREDIT-TRANSACTION-MS
+          predicates:
+          - Path=/creditTrans/**
+
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+    instance:
+      preferIpAddress: true
+      hostname: localhost
