@@ -1,5 +1,4 @@
 eureka:
   client:
-    serviceUrl:
-      registerWithEureka: false
-      fetchRegistry: false
+    register-with-eureka: false
+    fetch-registry: false
