@@ -6,31 +6,34 @@ spring:
     name: api-gateway
   cloud:
     gateway:
-      routes:
-        - id: client-ms
-          uri: http://localhost:8081/
-          predicates:
-            - Path=/client/**
-        - id: product-ms
-          uri: http://localhost:8082/
-          predicates:
-            - Path=/product/**
-        - id: debit-ms
-          uri: http://localhost:8083/
-          predicates:
-            - Path=/debit/**
-        - id: credit-ms
-          uri: http://localhost:8084/
-          predicates:
-            - Path=/credit/**
-        - id: debit-transaction-ms
-          uri: http://localhost:8085/
-          predicates:
-            - Path=/debitTrans/**
-        - id: credit-transaction-ms
-          uri: http://localhost:8086/
-          predicates:
-            - Path=/creditTrans/**
+      discovery:
+        client:
+          enabled: true
+#      routes:
+#        - id: client-ms
+#          uri: http://localhost:8081/
+#          predicates:
+#            - Path=/client/**
+#        - id: product-ms
+#          uri: http://localhost:8082/
+#          predicates:
+#            - Path=/product/**
+#        - id: debit-ms
+#          uri: http://localhost:8083/
+#          predicates:
+#            - Path=/debit/**
+#        - id: credit-ms
+#          uri: http://localhost:8084/
+#          predicates:
+#            - Path=/credit/**
+#        - id: debit-transaction-ms
+#          uri: http://localhost:8085/
+#          predicates:
+#            - Path=/debitTrans/**
+#        - id: credit-transaction-ms
+#          uri: http://localhost:8086/
+#          predicates:
+#            - Path=/creditTrans/**
 
 eureka:
   client:
