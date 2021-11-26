@@ -1,42 +1,42 @@
-server:
-  port: 8080
-
-spring:
-  application:
-    name: api-gateway
-  cloud:
-    gateway:
-      discovery:
-#        enabled: true
-        locator:
-          enabled: true
-#      routes:
-#        - id: client-ms
-#          uri: http://localhost:8081/
-#          predicates:
-#            - Path=/client/**
-#        - id: product-ms
-#          uri: http://localhost:8082/
-#          predicates:
-#            - Path=/product/**
-#        - id: debit-ms
-#          uri: http://localhost:8083/
-#          predicates:
-#            - Path=/debit/**
-#        - id: credit-ms
-#          uri: http://localhost:8084/
-#          predicates:
-#            - Path=/credit/**
-#        - id: debit-transaction-ms
-#          uri: http://localhost:8085/
-#          predicates:
-#            - Path=/debitTrans/**
-#        - id: credit-transaction-ms
-#          uri: http://localhost:8086/
-#          predicates:
-#            - Path=/creditTrans/**
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka
+#server:
+#  port: 8080
+#
+#spring:
+#  application:
+#    name: api-gateway
+##  cloud:
+##    gateway:
+##      discovery:
+###        enabled: true
+##        locator:
+##          enabled: true
+###      routes:
+###        - id: client-ms
+###          uri: http://localhost:8081/
+###          predicates:
+###            - Path=/client/**
+###        - id: product-ms
+###          uri: http://localhost:8082/
+###          predicates:
+###            - Path=/product/**
+###        - id: debit-ms
+###          uri: http://localhost:8083/
+###          predicates:
+###            - Path=/debit/**
+###        - id: credit-ms
+###          uri: http://localhost:8084/
+###          predicates:
+###            - Path=/credit/**
+###        - id: debit-transaction-ms
+###          uri: http://localhost:8085/
+###          predicates:
+###            - Path=/debitTrans/**
+###        - id: credit-transaction-ms
+###          uri: http://localhost:8086/
+###          predicates:
+###            - Path=/creditTrans/**
+#
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka
